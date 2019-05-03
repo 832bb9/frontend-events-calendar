@@ -20,6 +20,8 @@ const pipeP = (...fns) => async (...args) => {
 const EVENTS_ENDPOINT =
   "https://api.github.com/repos/web-standards-ru/calendar/contents/events";
 
+console.log('test')
+
 const App = () => {
   const [events, setEvents] = React.useState([]);
 

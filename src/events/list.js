@@ -10,7 +10,7 @@ import "./list.css";
 
 const dateToString = date =>
   `${String(date.getDate()).padStart(2, "0")}.${String(
-    date.getMonth()
+    date.getMonth() + 1
   ).padStart(2, "0")}.${date.getFullYear()}`;
 
 const stringToDate = string =>
@@ -35,7 +35,7 @@ export const EventsList = () => {
 
   const [filters, setFilters] = useState(() => ({
     location: "all",
-    from: new Date(new Date().setHours(0, 0, 0, 0))
+    from: new Date(0)
   }));
 
   const locationOptions = useTransform(
@@ -63,7 +63,7 @@ export const EventsList = () => {
               options={locationOptions}
               value={filters.location}
               onChange={next => {
-                console.log(next)
+                console.log(next);
                 setFilters(_.set("location", next));
               }}
             />
@@ -96,8 +96,10 @@ export const EventsList = () => {
             {data
               .filter(
                 _.allPass([
-                  ({ location }) => console.log(filters.location, location) ||
-                    filters.location === "all" || filters.location === location,
+                  ({ location }) =>
+                    console.log(filters.location, location) ||
+                    filters.location === "all" ||
+                    filters.location === location,
                   ({ start }) => filters.from <= start
                 ])
               )

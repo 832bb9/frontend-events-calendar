@@ -1,0 +1,13 @@
+.ui-input {
+
+}
+
+.ui-input-label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.ui-input-control {
+    display: block;
+    width: 100%;
+}

@@ -1,0 +1,13 @@
+.ui-select {
+
+}
+
+.ui-select-label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.ui-select-control {
+    display: block;
+    width: 100%;
+}

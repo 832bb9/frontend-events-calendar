@@ -1,0 +1,34 @@
+:root {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    --content-width: 1200px;
+    --content-spacing: 15px;
+}
+
+.page {
+    overflow: hidden;
+}
+
+.page-header {
+    text-align: center;
+}
+
+.section {
+    padding-left: var(--content-spacing);
+    padding-right: var(--content-spacing);
+}
+
+.section-content {
+    max-width: var(--content-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mt-8 {
+    margin-top: 8px;
+}
+
+.mt-16 {
+    margin-top: 16px;
+}
+
